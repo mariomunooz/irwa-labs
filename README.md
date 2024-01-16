@@ -15,6 +15,8 @@ cd <your preferred projects root directory>
 
 git clone https://github.com/mariomunooz/irwa-labs.git
 
+cd irwa-labs\search-engine-web-app
+
 ```
 
 
