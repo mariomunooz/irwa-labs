@@ -58,53 +58,13 @@ This will load the python virtualenv for the project.
 pip install -r requirements.txt
 ```
 
-## Starting the Web App
-
-```bash
-python -V
-# Make sure we use Python 3
-
-# Make sure we are on the folder irwa-labs\search-engine-web-app
-python web_app.py
-```
-The above will start a web server with the application:
-```
- * Serving Flask app 'web-app' (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on http://127.0.0.1:8088/ (Press CTRL+C to quit)
-```
-
-Open Web app in your Browser:  
-[http://127.0.0.1:8088/](http://127.0.0.1:8088/) or [http://localhost:8088/](http://localhost:8088/)
-
-Enjoy!
-
-
-
-
-## Git Help
-After creating the project and code in local computer...
-
-1. Login to GitHub and create a new repo.
-2. Go to the root page of your new repo and note the url from the browser.
-3. Execute the following locally.
-4. 
-```bash
-cd <project root folder>
-git init -b main
-git add . && git commit -m "initial commit"
-git remote add origin <your GitHub repo URL from the browser>
-git push -u origin main
-```
-
 
 ## Executing the code
 1. Open the Project Folder (IRWA-2023-part-4)
 2. Run in the terminal the following command
 ```bash
+python -V
+# Make sure we use Python 3
 python3 web_app.py
 ```
 3. To access the Search Engine Web App, press on the address that appears to be running in.
@@ -116,4 +76,7 @@ Example:
 
 4. Once in the Web, you can do the searches you want and keep playing and clicking on the different options displayed
 5. In case you want to quit, close the tab window or press Ctrl + C in terminal
+
+
+
 
