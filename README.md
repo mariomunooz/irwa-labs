@@ -66,7 +66,7 @@ cd irwa-labs\search-engine-web-app
 ```bash
 python -V
 # Make sure we use Python 3
-python3 web_app.py
+python web_app.py
 ```
 3. To access the Search Engine Web App, press on the address that appears to be running in.
 
