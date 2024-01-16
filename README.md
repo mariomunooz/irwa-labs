@@ -1,7 +1,8 @@
-# Search Engine with Web Analytics - skeleton project
+# Search Engine with Web Analytics
 # IRWA Final Project
 
-This projects contains the startup Flask files for developing a web application.
+This projects contains the  Flaskfiles of a Search Engine web application.
+Developed for the Information Retrieval and Web Analysis course under the guidance of [Ricardo Baeza-Yates](https://users.dcc.uchile.cl/~rbaeza/index.html)
 At first, there are some instructions for the cloning repository an starting the
 environment. At the end, there are the instructions for executing the code.
 
