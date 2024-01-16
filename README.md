@@ -14,9 +14,6 @@ Open a terminal console and execute:
 cd <your preferred projects root directory>
 
 git clone https://github.com/mariomunooz/irwa-labs.git
-
-cd irwa-labs\search-engine-web-app
-
 ```
 
 
@@ -55,6 +52,7 @@ This will load the python virtualenv for the project.
 
 ### Installing Flask and other packages in your virtualenv
 ```bash
+#Make sure you are on the following search-engine-web-app folder
 pip install -r requirements.txt
 ```
 
