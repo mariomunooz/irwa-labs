@@ -64,7 +64,7 @@ pip install -r requirements.txt
 python -V
 # Make sure we use Python 3
 
-cd irwa-labs\search-engine-web-app
+# Make sure we are on the folder irwa-labs\search-engine-web-app
 python web_app.py
 ```
 The above will start a web server with the application:
