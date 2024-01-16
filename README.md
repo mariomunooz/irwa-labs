@@ -15,7 +15,6 @@ cd <your preferred projects root directory>
 
 git clone https://github.com/mariomunooz/irwa-labs.git
 
-cd irwa-labs\search-engine-web-app
 ```
 
 
@@ -26,7 +25,7 @@ cd irwa-labs\search-engine-web-app
 python -V
 # Make sure we use Python 3
 
-cd search-engine-web-app
+cd irwa-labs\search-engine-web-app
 python web_app.py
 ```
 The above will start a web server with the application:
