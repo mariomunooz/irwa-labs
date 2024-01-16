@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Details - IRWA Search Engine 2023</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        .text-primary {
+            color: #007bff;
+        }
+
+        .text-dark {
+            color: #333;
+        }
+
+        .text-muted {
+            color: #888;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .go-back {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <div class='header text-center'>
+        <a href="/">
+            <img src="{{ url_for('static', filename='logo.png') }}" width="100" alt="UPF logo"/>
+        </a>
+        <span> Document Details </span>
+        <br>
+    </div>
+
+        <span class="text-primary"><strong>TITLE:</strong></span> <strong>{{ title }}</strong>
+        <br>
+        <br>
+        <span class="text-dark"><strong><em>Description:</em></strong></span> {{ description }}
+        <br>
+        <br>
+        <span class="text-dark"><strong>Likes:</strong></span> {{ likes }}
+        <br>
+        <span class="text-dark"><strong>Retweets:</strong></span> {{ retweets }}
+        <br>
+        <br>
+        <span class="text-muted"><strong>Date:</strong></span> {{ date }}
+        {% if url %}
+            <br>
+            <span class="text-muted"><strong>URL:</strong></span> <a href="{{ url }}" target="_blank">{{ url }}</a>
+        {% endif %}
+        <br>
+        <br>
+
+<div><a href="#" onclick="history.go(-1)">Go Back</a></div>
+<div><a href="#" onclick="history.go(-2)">Go Back 2 pages</a></div>
+<div><a href="#" onclick="history.go(-3)">Go Back 3 pages</a></div>
+<div><a href="#" onclick="history.go(-4)">Go Back 4 pages</a></div>
+    <br>
+<div><a href="/stats" >View Statistics</a></div>
+<div><a href="/dashboard" >View Dashboard</a></div>
+</body>
+</html>

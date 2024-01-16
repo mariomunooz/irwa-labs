@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block page_title %}{{ page_title }}{% endblock %}
+{% block content %}
+    User Request <strong>{{ request }}</strong>
+    <br>
+    Found <strong>{{ found_counter }}</strong> results...
+    <hr>
+
+    {% for doc in results_list %}
+        <div class="pb-3">
+            <div>
+                <span class="text-primary"><strong>Title:</strong></span> <strong>{{ doc.title }}</strong>
+                <br>
+            <br>
+                <span class="text-dark"><strong><em>Description:</em></strong></span> {{ doc.description }}...
+                <br>
+                <br>
+                <span class="text-muted">Date:</span> {{ doc.doc_date }}
+                {% if doc.url %}
+                    <br>
+                    <span class="text-muted">URL:</span> <a href="{{ doc.url }}" target="_blank">{{ doc.url }}</a>
+                {% endif %}
+                <br>
+                <br>
+            <div><a href="{{ doc.ref }}">View Details</a></div>
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock %}

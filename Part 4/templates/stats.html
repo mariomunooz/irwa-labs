@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block page_title %}{{ page_title }}{% endblock %}
+{% block content %}
+    <h2>Quick Statistics</h2>
+    <h4>Clicked Documents:</h4>
+
+    {% for doc in stats_docs %}
+        <div class="pb-3">
+            <div class="">
+                <span class="text-primary"> <strong>({{ doc.count }} visits) </strong></span> — id: {{ doc.id }}
+                <br>
+                <span class="text-muted"><strong>Title:</strong></span> <strong>{{ doc.title }}</strong>
+                <br>
+                <span class="text-muted"><strong>Text:</strong></span> <em>{{ doc.description }}</em>
+                <br>
+                {% if doc.url %}
+                <br>
+                <span class="text-muted"><strong>URL:</strong></span> <a href="{{ doc.url }}" target="_blank">{{ doc.url }}</a>
+                {% endif %}
+
+            {% for docu in clicks_data %}
+                {% if doc == docu %}
+                    <div class="">
+                        <span class="text-primary"> <strong>Click ID: {{ docu.click_id }}</strong></span>
+                        <br>
+                        <span class="text-muted"><strong>Ranking:</strong></span> <strong>{{ docu.ranking }}</strong>
+                        <br>
+                        <span class="text-muted"><strong>Dwell Time:</strong></span> <em>{{ docu.dwell_time }}</em>
+                        <br>
+                        <span class="text-muted"><strong>Browser:</strong></span> <em>{{ docu.browser }}</em>
+                        <br>
+                        <span class="text-muted"><strong>Operating System:</strong></span> <em>{{ docu.operating_system }}</em>
+                        <br>
+                        <span class="text-muted"><strong>Timestamp:</strong></span> <em>{{ docu.timestamp }}</em>
+                        <br>
+                {% endif %}
+            {% endfor %}
+
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+
+    <h4>Requested Queries:</h4>
+
+    {% for query in queries_data %}
+        <div class="pb-3">
+            <div class="">
+                <span class="text-primary"> <strong>Query: {{ query.query_name}} </strong></span> — id: {{ query.request_id}}
+                <br>
+                <br>
+                <span class="text-muted"><strong>Length:</strong></span> {{ query.query_length }}
+                <br>
+                <span class="text-muted"><strong>Frequency:</strong></span> {{ query.freq_query }}
+                <br>
+                <span class="text-muted"><strong>Method:</strong></span> {{ query.method }}
+                <br>
+                <span class="text-muted"><strong>Header:</strong></span> {{ query.headers }}
+                <br>
+                <span class="text-muted"><strong>Timestamp:</strong></span> {{ query.timestamp }}
+                <br>
+                <br>
+                {% if query.url %}
+                <br>
+                <span class="text-muted"><strong>Url:</strong></span> <a href="{{ query.url }}" target="_blank">{{ query.url }}</a>
+                {% endif %}
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+
+    <h4>Session Information:</h4>
+        <div class="pb-3">
+            <div class="">
+                <span class="text-primary"> <strong>Session ID: {{ session_data.session_id}}</strong></span>
+                <br>
+                <br>
+                <span class="text-muted"><strong>Number of Searches:</strong></span> {{ session_data.num_searches }}
+                <br>
+                <span class="text-muted"><strong>Number of Clicks:</strong></span> {{ session_data.num_clicks }}
+                <br>
+                <span class="text-muted"><strong>User Agent:</strong></span> {{ session_data.user_agent }}
+                <br>
+                <span class="text-muted"><strong>IP Address:</strong></span> {{ session_data.ip_address }}
+                <br>
+
+                {% if session_data.search_query %}
+                <span class="text-muted"><strong>Search Query:</strong></span> {{ session_data.search_query }}
+                {% endif %}
+
+                {% if session_data.browser %}
+                <span class="text-muted"><strong>Browser:</strong></span> {{ session_data.browser }}
+                {% endif %}
+
+                {% if session_data.operating_system %}
+                <span class="text-muted"><strong>Operating System:</strong></span> {{ session_data.operating_system }}
+                {% endif %}
+
+                {% if session_data.timestamp %}
+                <span class="text-muted"><strong>Timestamp:</strong></span> {{ session_data.timestamp }}
+                {% endif %}
+            </div>
+        </div>
+        <hr>
+
+
+{% endblock %}
