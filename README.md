@@ -18,30 +18,6 @@ git clone https://github.com/mariomunooz/irwa-labs.git
 ```
 
 
-
-## Starting the Web App
-
-```bash
-python -V
-# Make sure we use Python 3
-
-cd irwa-labs\search-engine-web-app
-python web_app.py
-```
-The above will start a web server with the application:
-```
- * Serving Flask app 'web-app' (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on http://127.0.0.1:8088/ (Press CTRL+C to quit)
-```
-
-Open Web app in your Browser:  
-[http://127.0.0.1:8088/](http://127.0.0.1:8088/) or [http://localhost:8088/](http://localhost:8088/)
-
-
 ## Virtualenv for the project (first time use)
 ### Install virtualenv
 Having different version of libraries for different projects.  
@@ -79,6 +55,28 @@ This will load the python virtualenv for the project.
 ```bash
 pip install -r requirements.txt
 ```
+
+## Starting the Web App
+
+```bash
+python -V
+# Make sure we use Python 3
+
+cd irwa-labs\search-engine-web-app
+python web_app.py
+```
+The above will start a web server with the application:
+```
+ * Serving Flask app 'web-app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:8088/ (Press CTRL+C to quit)
+```
+
+Open Web app in your Browser:  
+[http://127.0.0.1:8088/](http://127.0.0.1:8088/) or [http://localhost:8088/](http://localhost:8088/)
 
 Enjoy!
 
