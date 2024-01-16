@@ -52,13 +52,16 @@ This will load the python virtualenv for the project.
 
 ### Installing Flask and other packages in your virtualenv
 ```bash
-#Make sure you are on the following search-engine-web-app folder
+#Make sure you are on the search-engine-web-app folder
 pip install -r requirements.txt
 ```
 
 
 ## Executing the code
-1. Open the Project Folder (IRWA-2023-part-4)
+1. Open the Project Folder (search-engine-web-app)
+```bash
+cd irwa-labs\search-engine-web-app
+```
 2. Run in the terminal the following command
 ```bash
 python -V
@@ -74,6 +77,8 @@ Example:
 
 4. Once in the Web, you can do the searches you want and keep playing and clicking on the different options displayed
 5. In case you want to quit, close the tab window or press Ctrl + C in terminal
+
+Enjoy!
 
 
 
